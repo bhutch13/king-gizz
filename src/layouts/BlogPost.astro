@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  publishDate: string;
+}
+
+const { title, publishDate } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>{title}</h1>
+        <time>{publishDate}</time>
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
+
+<style>
+  main {
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  article {
+    margin-top: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  time {
+    color: #666;
+    display: block;
+    margin-bottom: 2rem;
+  }
+</style>

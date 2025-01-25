@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const posts = await Astro.glob('./posts/*.md');
+---
+
+<Layout title="My Blog">
+	<main>
+		<h1>Welcome to My Blog</h1>
+		<ul>
+			{posts.map(post => (
+				<li>
+					<a href={post.url}>
+						<h2>{post.frontmatter.title}</h2>
+						<time>{post.frontmatter.publishDate}</time>
+					</a>
+				</li>
+			))}
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 2rem;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		margin-bottom: 2rem;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		padding: 1rem;
+		border-radius: 8px;
+		background: #f4f4f4;
+		transition: background 0.2s;
+	}
+	a:hover {
+		background: #e4e4e4;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.5rem;
+	}
+	time {
+		color: #666;
+		font-size: 0.9rem;
+	}
+</style>
