@@ -1,0 +1,168 @@
+---
+// src/pages/cv.astro
+import CVLayout from '../layouts/CVLayout.astro';
+---
+
+<CVLayout>
+  <div class="cv-container">
+    <header class="cv-header">
+      <h1>Bryce Hutchinson</h1>
+      <p class="tagline">Analytics & Machine Learning Professional</p>
+    </header>
+
+    <section class="cv-section">
+      <h2>About</h2>
+      <p>Technical professional with 8+ years of experience in analytics and machine learning, specializing in predictive modeling and large-scale data analysis.</p>
+    </section>
+
+    <section class="cv-section">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Analytics & Pricing Manager</h3>
+        <p class="company">Architectural Surfaces, Austin, TX</p>
+        <p class="date">Oct 2022 - May 2024</p>
+        <ul>
+          <li>Implemented RFM analysis to identify high-value lost customers, enabling $2M+ in re-engagement</li>
+          <li>Built automated analytics pipeline reducing processing time by 75%</li>
+          <li>Created real-time Power BI dashboards driving 20% increase in conversion rates</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Business Intelligence Analyst</h3>
+        <p class="company">Zilliant, Remote</p>
+        <p class="date">July 2021 - Oct 2022</p>
+        <ul>
+          <li>Developed market-based recommendation system driving 15% revenue growth</li>
+          <li>Executed complex AWS Redshift queries on 50M+ annual transactions</li>
+          <li>Implemented geospatial analysis reducing delivery distance by 20%</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Geophysicist</h3>
+        <p class="company">Noble Energy (Acquired by Chevron), Houston, TX</p>
+        <p class="date">Aug 2016 - Nov 2019</p>
+        <ul>
+          <li>Developed neural networks improving analytical accuracy by 40%</li>
+          <li>Created visualizations influencing $10M+ in drilling decisions</li>
+          <li>Led $400K data processing project implementation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming & ML</h3>
+          <ul>
+            <li>Python (Pandas, NumPy, Scikit-learn)</li>
+            <li>PyTorch, Plotly, Matplotlib</li>
+            <li>Statistical Modeling</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Data & Cloud</h3>
+          <ul>
+            <li>SQL, AWS Redshift</li>
+            <li>Docker, API Integration</li>
+            <li>Power BI, Tableau, Looker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <div class="project-item">
+        <h3>Master of Science in Geophysics</h3>
+        <p>University of Oklahoma | 2014-2016</p>
+        <p class="company">Concentration: Seismic Interpretation and Processing</p>
+      </div>
+      <div class="project-item">
+        <h3>Bachelor of Science in Geophysics</h3>
+        <p>Texas A&M University | 2009-2013</p>
+        <p class="company">Minor: Mathematics</p>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .cv-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .cv-header {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .tagline {
+      color: #666;
+      font-size: 1.2rem;
+    }
+
+    .cv-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .cv-section h2 {
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .experience-item, .project-item {
+      margin-bottom: 2rem;
+    }
+
+    .experience-item h3, .project-item h3 {
+      margin: 0;
+      color: #2d3436;
+    }
+
+    .company {
+      color: #636e72;
+      font-weight: 500;
+      margin: 0.25rem 0;
+    }
+
+    .date {
+      color: #636e72;
+      font-size: 0.9rem;
+      margin: 0.25rem 0 1rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-category h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .experience-item ul {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-item, .project-item, .skill-category {
+      transition: all 0.3s ease;
+    }
+  </style>
+</CVLayout>
